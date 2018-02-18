@@ -11,7 +11,6 @@ public class ServerConsole {
     }
 
     public void init(){
-
         controller.connect();
         System.out.println("inizialized");
         controller.waitClients();

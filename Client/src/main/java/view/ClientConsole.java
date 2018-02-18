@@ -7,6 +7,9 @@ import java.util.Scanner;
 
 public class ClientConsole {
 
+    private static final int AUTHORIZATION = 1;
+    private static final int MESSAGE = 2;
+
     private ClientController controller;
     private boolean agentOrClient = true;
 
@@ -23,21 +26,22 @@ public class ClientConsole {
         readFromServer.start();
 
         WriteToServer writeToServer = new WriteToServer(controller);
+
         Scanner scanner = new Scanner(System.in);
         String line;
 
         while(true){
             if(scanner.hasNextLine()) {
+
                 line = scanner.nextLine();
 
                 if(agentOrClient){
                     agentOrClient = false;
-                    writeToServer.sendPacket(line, 1);
+                    writeToServer.sendPacket(line, AUTHORIZATION);
                     continue;
                 }
 
-                writeToServer.sendPacket(line, 2);
-
+                writeToServer.sendPacket(line, MESSAGE);
             }else
             {
                 try{
@@ -47,5 +51,9 @@ public class ClientConsole {
                 }
             }
         }
+    }
+
+    public static void exit(){
+        System.exit(0);
     }
 }

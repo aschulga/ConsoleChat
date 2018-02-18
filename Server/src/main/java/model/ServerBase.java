@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class ServerBase {
 
-    private LinkedList<Agent> listAgent = new LinkedList<Agent>();
-    private LinkedList<Client> listClient = new LinkedList<Client>();
+    private LinkedList<Socket> listAgent = new LinkedList<Socket>();
+    private LinkedList<Socket> listClient = new LinkedList<Socket>();
     private Map<Socket, Socket> mapPair = new HashMap<>();
     private Map<Socket, Parameters<String, String>> mapParameters = new HashMap<>();
     private int port;
@@ -21,11 +21,11 @@ public class ServerBase {
         return port;
     }
 
-    public LinkedList<Agent> getListAgent() {
+    public LinkedList<Socket> getListAgent() {
         return listAgent;
     }
 
-    public LinkedList<Client> getListClient() {
+    public LinkedList<Socket> getListClient() {
         return listClient;
     }
 

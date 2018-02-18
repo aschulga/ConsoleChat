@@ -2,19 +2,19 @@ package model;
 
 public class Parameters<T1, T2> {
 
-    private String status;
-    private String name;
+    private T1 status;
+    private T2 name;
 
-    public Parameters(String status, String name){
+    public Parameters(T1 status, T2 name){
         this.status = status;
         this.name = name;
     }
 
-    public String getName() {
-        return name;
+    public T1 getStatus() {
+        return status;
     }
 
-    public String getStatus() {
-        return status;
+    public T2 getName() {
+        return name;
     }
 }

@@ -1,6 +1,7 @@
 package controller;
 
 import model.ClientBase;
+import view.ClientConsole;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -28,9 +29,8 @@ public class ClientController {
 
     public void end(){
         try {
-            if(socket != null) {
-                socket.close();
-            }
+            socket.close();
+            ClientConsole.exit();
         }catch (IOException e)
         {
             System.out.println(e);

@@ -1,6 +1,5 @@
 package controller;
 
-
 import java.io.DataOutputStream;
 import java.io.IOException;
 
@@ -12,29 +11,17 @@ public class WriteToServer {
         this.controller = controller;
     }
 
-    public void sendPacket(String line, int number) {//передаю сообщения серверу
+    public void sendPacket(String line, int number) {
 
         DataOutputStream dos = null;
 
         try {
             dos = new DataOutputStream(controller.getSocket().getOutputStream());
-
             dos.writeUTF(line);
             dos.writeInt(number);
-            dos.flush();//очистка выходного буфера
-
-
+            dos.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        /*finally {
-            if(dos != null){
-                try {
-                    dos.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }*/
     }
 }
