@@ -3,6 +3,7 @@ package controller;
 import model.Parameters;
 import model.ServerBase;
 
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -15,6 +16,8 @@ public class ServerController {
     private static final int REQUEST = 1;
     private ServerSocket serverSocket;
     private ServerBase base;
+    private DataInputStream dis = null;
+    private DataOutputStream dos = null;
 
     public ServerController(ServerBase base){
         this.base = base;
@@ -28,7 +31,7 @@ public class ServerController {
         return base.getListClient();
     }
 
-    public Map<Socket, Socket> getMapPair() {
+    public Map<Socket, Parameters<Socket, Boolean>> getMapPair() {
         return base.getMapPair();
     }
 
@@ -48,11 +51,6 @@ public class ServerController {
         try {
             while (true) {
                 Socket socket = serverSocket.accept();
-
-                DataOutputStream dos = new DataOutputStream(socket.getOutputStream());
-                dos.writeInt(REQUEST);
-                dos.writeUTF("Who are you?(client or agent)");
-
                 ServerThread thread = new ServerThread(socket, this);
                 thread.start();
             }
@@ -60,4 +58,8 @@ public class ServerController {
             System.out.println(e);
         }
     }
+
+
+
+
 }

@@ -2,19 +2,23 @@ package model;
 
 public class Parameters<T1, T2> {
 
-    private T1 status;
-    private T2 name;
+    private T1 parameter1;
+    private T2 parameter2;
 
-    public Parameters(T1 status, T2 name){
-        this.status = status;
-        this.name = name;
+    public Parameters(T1 parameter1, T2 parameter2){
+        this.parameter1 = parameter1;
+        this.parameter2 = parameter2;
     }
 
-    public T1 getStatus() {
-        return status;
+    public T1 getParameter1() {
+        return parameter1;
     }
 
-    public T2 getName() {
-        return name;
+    public T2 getParameter2() {
+        return parameter2;
+    }
+
+    public void setParameter2(T2 parameter2) {
+        this.parameter2 = parameter2;
     }
 }

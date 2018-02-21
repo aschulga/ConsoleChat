@@ -5,9 +5,10 @@ import java.io.IOException;
 
 public class ReadFromServer extends Thread {
 
-    private static final int AUTHORIZATION = 1;
-    private static final int MESSAGE = 2;
+    private static final int REGISTRATION = 1;
+    private static final int LEAVE = 2;
     private static final int EXIT = 3;
+    private static final int MESSAGE = 4;
 
     private ClientController controller;
 
@@ -33,18 +34,23 @@ public class ReadFromServer extends Thread {
                     int number = dis.readInt();
 
                     switch (number) {
-                        case AUTHORIZATION:
-                            System.out.println(dis.readUTF());
+                        case REGISTRATION:{
+                            controller.receiveAnswerServerForRegistration();
                             break;
-                        case MESSAGE:
-                            String str1 = dis.readUTF();
-                            String str2 = dis.readUTF();
-                            String str3 = dis.readUTF();
-                            System.out.println("[" + str1 + " " + str2 + "] : " + str3);
+                        }
+                        case LEAVE: {
+                            controller.receiveAnswerForCommandLeave();
                             break;
-                        case EXIT:
+                        }
+                        case EXIT: {
+                            //controller.receiveAnswerForCommandExit();
                             controller.end();
                             break;
+                        }
+                        case MESSAGE: {
+                            controller.receive();
+                            break;
+                        }
                     }
                 }
             }
@@ -63,3 +69,11 @@ public class ReadFromServer extends Thread {
         }
     }
 }
+
+
+
+
+
+
+
+

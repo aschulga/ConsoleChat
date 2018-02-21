@@ -1,14 +1,12 @@
 package view;
 
-import controller.ClientController;
-import controller.ReadFromServer;
-import controller.WriteToServer;
+import controller.*;
+
 import java.util.Scanner;
 
 public class ClientConsole {
 
-    private static final int AUTHORIZATION = 1;
-    private static final int MESSAGE = 2;
+    private static final int REGISTRATION = 1;
 
     private ClientController controller;
     private boolean agentOrClient = true;
@@ -20,28 +18,33 @@ public class ClientConsole {
 
     public void init(){
 
-        controller.connect();
+        CommandConnect commandConnect = new CommandConnect(controller);
+        commandConnect.execute();
 
         ReadFromServer readFromServer = new ReadFromServer(controller);
         readFromServer.start();
-
-        WriteToServer writeToServer = new WriteToServer(controller);
 
         Scanner scanner = new Scanner(System.in);
         String line;
 
         while(true){
             if(scanner.hasNextLine()) {
-
                 line = scanner.nextLine();
-
                 if(agentOrClient){
-                    agentOrClient = false;
-                    writeToServer.sendPacket(line, AUTHORIZATION);
-                    continue;
+                    if (!Validator.isValidateRequest(line, REGISTRATION)) {
+                        System.out.println("Not correct");
+                        continue;
+                    }
+                    else{
+                        Command commandRegistration = new CommandRegistration(line, controller, REGISTRATION);
+                        commandRegistration.execute();
+                        agentOrClient = false;
+                    }
                 }
-
-                writeToServer.sendPacket(line, MESSAGE);
+                else{
+                    Command commandLeafOrExit = new CommandWithoutParameters(line, controller);
+                    commandLeafOrExit.execute();
+                }
             }else
             {
                 try{

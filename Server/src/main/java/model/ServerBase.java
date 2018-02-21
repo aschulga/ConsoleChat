@@ -9,7 +9,7 @@ public class ServerBase {
 
     private LinkedList<Socket> listAgent = new LinkedList<Socket>();
     private LinkedList<Socket> listClient = new LinkedList<Socket>();
-    private Map<Socket, Socket> mapPair = new HashMap<>();
+    private Map<Socket, Parameters<Socket, Boolean>> mapPair = new HashMap<>();
     private Map<Socket, Parameters<String, String>> mapParameters = new HashMap<>();
     private int port;
 
@@ -29,7 +29,7 @@ public class ServerBase {
         return listClient;
     }
 
-    public Map<Socket, Socket> getMapPair() {
+    public Map<Socket, Parameters<Socket, Boolean>> getMapPair() {
         return mapPair;
     }
 

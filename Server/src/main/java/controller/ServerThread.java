@@ -12,14 +12,10 @@ import java.net.Socket;
 public class ServerThread extends Thread {
 
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final int COMMAND = 0;
-    private static final int AUTHORIZATION = 1;
-    private static final int STATUS = 1;
-    private static final int NAME = 2;
+    private static final int REGISTRATION = 1;
+    private static final int LEAVE = 2;
     private static final int EXIT = 3;
-    private static final String REGISTRATIONCOMMAND = "/register";
-    private static final String LEAVECHATCOMMAND = "/leave";
-    private static final String EXITCHATCOMMAND = "/exit";
+    private static final int MESSAGE = 4;
 
     private Socket socket;
     private ServerController controller;
@@ -30,7 +26,7 @@ public class ServerThread extends Thread {
     }
 
     public Socket findValue(Socket socket) {
-        return controller.getMapPair().get(socket);
+        return controller.getMapPair().get(socket).getParameter1();
     }
 
     public void createPair(){
@@ -39,25 +35,25 @@ public class ServerThread extends Thread {
             Socket s1 = controller.getListClient().removeLast();
             Socket s2 = controller.getListAgent().removeLast();
 
-            controller.getMapPair().put(s1, s2);
-            controller.getMapPair().put(s2, s1);
+            controller.getMapPair().put(s1, new Parameters<>(s2, true));//true
+            controller.getMapPair().put(s2, new Parameters<>(s1, false));//false
 
-            LOGGER.log(Level.INFO, " - The beginning of a chat between "+controller.getMapParameters().get(s1).getStatus()+" "+
-                    controller.getMapParameters().get(s1).getName()+" and "+controller.getMapParameters().get(s2).getStatus()+" "+
-                    controller.getMapParameters().get(s2).getName());
+            LOGGER.log(Level.INFO, " - The beginning of a chat between "+controller.getMapParameters().get(s1).getParameter1()+" "+
+                    controller.getMapParameters().get(s1).getParameter2()+" and "+controller.getMapParameters().get(s2).getParameter1()+" "+
+                    controller.getMapParameters().get(s2).getParameter2());
         }
     }
 
-    public void authorize(String[]strings){
-        if ("agent".equals(strings[STATUS])) {
+    public void authorize(String status, String name){
+        if ("agent".equals(status)) {
             controller.getListAgent().push(socket);
-        } else if ("client".equals(strings[STATUS])) {
+        } else if ("client".equals(status)) {
             controller.getListClient().push(socket);
         }
 
-        LOGGER.log(Level.INFO, " - The appearance of "+strings[STATUS]+" "+strings[NAME]+" in the system");
+        LOGGER.log(Level.INFO, " - The appearance of "+status+" "+name+" in the system");
 
-        controller.getMapParameters().put(socket, new Parameters<>(strings[STATUS],strings[NAME]));
+        controller.getMapParameters().put(socket, new Parameters<>(status, name));
         createPair();
     }
 
@@ -67,9 +63,9 @@ public class ServerThread extends Thread {
         controller.getListAgent().push(s);
         controller.getListClient().push(socket);
 
-        LOGGER.log(Level.INFO, " - The end of the chat between "+controller.getMapParameters().get(socket).getStatus()+" "+
-                controller.getMapParameters().get(socket).getName()+" and "+controller.getMapParameters().get(s).getStatus()+" "+
-                controller.getMapParameters().get(s).getName());
+        LOGGER.log(Level.INFO, " - The end of the chat between "+controller.getMapParameters().get(socket).getParameter1()+" "+
+                controller.getMapParameters().get(socket).getParameter2()+" and "+controller.getMapParameters().get(s).getParameter1()+" "+
+                controller.getMapParameters().get(s).getParameter2());
 
         controller.getMapPair().remove(s);
         controller.getMapPair().remove(socket);
@@ -79,19 +75,19 @@ public class ServerThread extends Thread {
     public void exit() {
         if (controller.getMapPair().containsKey(socket) == true) {
 
-            if (controller.getMapParameters().get(socket).getStatus().equals("client"))
+            if (controller.getMapParameters().get(socket).getParameter1().equals("client"))
                 controller.getListAgent().push(findValue(socket));
             else
                 controller.getListClient().push(findValue(socket));
 
-            LOGGER.log(Level.INFO, " - The "+controller.getMapParameters().get(socket).getStatus()+" "+
-                    controller.getMapParameters().get(socket).getName()+" left the system");
+            LOGGER.log(Level.INFO, " - The "+controller.getMapParameters().get(socket).getParameter1()+" "+
+                    controller.getMapParameters().get(socket).getParameter2()+" left the system");
 
             Socket s = findValue(socket);
 
-            LOGGER.log(Level.INFO, " - The end of the chat between "+controller.getMapParameters().get(socket).getStatus()+" "+
-                    controller.getMapParameters().get(socket).getName()+" and "+controller.getMapParameters().get(s).getStatus()+" "+
-                    controller.getMapParameters().get(s).getName());
+            LOGGER.log(Level.INFO, " - The end of the chat between "+controller.getMapParameters().get(socket).getParameter1()+" "+
+                    controller.getMapParameters().get(socket).getParameter2()+" and "+controller.getMapParameters().get(s).getParameter1()+" "+
+                    controller.getMapParameters().get(s).getParameter2());
 
             controller.getMapPair().remove(s);
             controller.getMapPair().remove(socket);
@@ -99,10 +95,10 @@ public class ServerThread extends Thread {
             createPair();
         }
         else {
-            LOGGER.log(Level.INFO, " - The "+controller.getMapParameters().get(socket).getStatus()+" "+
-                    controller.getMapParameters().get(socket).getName()+" left the system");
+            LOGGER.log(Level.INFO, " - The "+controller.getMapParameters().get(socket).getParameter1()+" "+
+                    controller.getMapParameters().get(socket).getParameter2()+" left the system");
 
-            if(controller.getMapParameters().get(socket).getStatus().equals("client"))
+            if(controller.getMapParameters().get(socket).getParameter1().equals("client"))
                 controller.getListClient().remove(socket);
             else
                 controller.getListAgent().remove(socket);
@@ -115,47 +111,51 @@ public class ServerThread extends Thread {
     public void run() {
         DataInputStream dis = null;
         DataOutputStream dos = null;
+        String codeCommand;
         String str;
-        int number;
-
         try {
 
             dis = new DataInputStream(socket.getInputStream());
 
-            while ((str = dis.readUTF()) != null) {
+            while ((codeCommand = dis.readUTF()) != null) {
 
                 dos = new DataOutputStream(socket.getOutputStream());
-                number = dis.readInt();
-                String[]strings = str.split(" ");
 
-                if(REGISTRATIONCOMMAND.equals(strings[COMMAND]) && number == AUTHORIZATION) {
-                    authorize(strings);
+                if (Integer.parseInt(codeCommand) == REGISTRATION) {
+                    authorize(dis.readUTF(), dis.readUTF());
                 }
-                else if (LEAVECHATCOMMAND.equals(strings[COMMAND]) && controller.getMapParameters().get(socket).getStatus().equals("client")) {
-                    if(controller.getMapPair().containsKey(socket) == true) {
+                else if (Integer.parseInt(codeCommand) == LEAVE && controller.getMapParameters().get(socket).getParameter1().equals("client")) {
+                    if (controller.getMapPair().containsKey(socket) == true) {
                         leave();
                     }
                 }
-                else if (EXITCHATCOMMAND.equals(strings[COMMAND])){
+                else if (Integer.parseInt(codeCommand) == EXIT) {
                     exit();
                     dos.writeInt(EXIT);
                 }
-                else {
+                else if (Integer.parseInt(codeCommand) == MESSAGE){
+                    str = dis.readUTF();
+
                     while (true) {
-                        if (controller.getMapPair().containsKey(socket) == true) {
-                            dos = new DataOutputStream(findValue(socket).getOutputStream());
-                            dos.writeInt(number);
-                            dos.writeUTF(controller.getMapParameters().get(socket).getStatus());
-                            dos.writeUTF(controller.getMapParameters().get(socket).getName());
-                            dos.writeUTF(str);
+                        if (controller.getMapPair().containsKey(socket)) {
+                            if(controller.getMapPair().get(socket).getParameter2()) {
+                                dos = new DataOutputStream(findValue(socket).getOutputStream());
+                                dos.writeInt(MESSAGE);
+                                dos.writeUTF(controller.getMapParameters().get(socket).getParameter1());
+                                dos.writeUTF(controller.getMapParameters().get(socket).getParameter2());
+                                dos.writeUTF(str);
+
+                                controller.getMapPair().get(findValue(socket)).setParameter2(true);
+                            }
                             break;
                         }
                     }
                 }
             }
-        } catch (IOException e) {
+        }catch (IOException e) {
             System.out.println(e);
-        } finally {
+        }
+        finally {
             disconnect(dos, dis);
         }
     }
