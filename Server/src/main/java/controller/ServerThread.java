@@ -32,11 +32,11 @@ public class ServerThread extends Thread {
     public void createPair(){
         if (!controller.getListClient().isEmpty() && !controller.getListAgent().isEmpty()) {
 
-            Socket s1 = controller.getListClient().removeLast();
-            Socket s2 = controller.getListAgent().removeLast();
+            Socket s1 = controller.getListClient().remove(0);
+            Socket s2 = controller.getListAgent().remove(0);
 
-            controller.getMapPair().put(s1, new Parameters<>(s2, true));//true
-            controller.getMapPair().put(s2, new Parameters<>(s1, false));//false
+            controller.getMapPair().put(s1, new Parameters<>(s2, true));
+            controller.getMapPair().put(s2, new Parameters<>(s1, false));
 
             LOGGER.log(Level.INFO, " - The beginning of a chat between "+controller.getMapParameters().get(s1).getParameter1()+" "+
                     controller.getMapParameters().get(s1).getParameter2()+" and "+controller.getMapParameters().get(s2).getParameter1()+" "+
@@ -46,9 +46,9 @@ public class ServerThread extends Thread {
 
     public void authorize(String status, String name){
         if ("agent".equals(status)) {
-            controller.getListAgent().push(socket);
+            controller.getListAgent().add(socket);
         } else if ("client".equals(status)) {
-            controller.getListClient().push(socket);
+            controller.getListClient().add(socket);
         }
 
         LOGGER.log(Level.INFO, " - The appearance of "+status+" "+name+" in the system");
@@ -60,8 +60,8 @@ public class ServerThread extends Thread {
     public void leave(){
         Socket s = findValue(socket);
 
-        controller.getListAgent().push(s);
-        controller.getListClient().push(socket);
+        controller.getListAgent().add(s);
+        controller.getListClient().add(socket);
 
         LOGGER.log(Level.INFO, " - The end of the chat between "+controller.getMapParameters().get(socket).getParameter1()+" "+
                 controller.getMapParameters().get(socket).getParameter2()+" and "+controller.getMapParameters().get(s).getParameter1()+" "+
@@ -75,10 +75,10 @@ public class ServerThread extends Thread {
     public void exit() {
         if (controller.getMapPair().containsKey(socket) == true) {
 
-            if (controller.getMapParameters().get(socket).getParameter1().equals("client"))
-                controller.getListAgent().push(findValue(socket));
+            if ("client".equals(controller.getMapParameters().get(socket).getParameter1()))
+                controller.getListAgent().add(findValue(socket));
             else
-                controller.getListClient().push(findValue(socket));
+                controller.getListClient().add(findValue(socket));
 
             LOGGER.log(Level.INFO, " - The "+controller.getMapParameters().get(socket).getParameter1()+" "+
                     controller.getMapParameters().get(socket).getParameter2()+" left the system");
@@ -98,7 +98,7 @@ public class ServerThread extends Thread {
             LOGGER.log(Level.INFO, " - The "+controller.getMapParameters().get(socket).getParameter1()+" "+
                     controller.getMapParameters().get(socket).getParameter2()+" left the system");
 
-            if(controller.getMapParameters().get(socket).getParameter1().equals("client"))
+            if("client".equals(controller.getMapParameters().get(socket).getParameter1()))
                 controller.getListClient().remove(socket);
             else
                 controller.getListAgent().remove(socket);
@@ -111,20 +111,20 @@ public class ServerThread extends Thread {
     public void run() {
         DataInputStream dis = null;
         DataOutputStream dos = null;
+        DataOutputStream d = null;
         String codeCommand;
         String str;
         try {
 
             dis = new DataInputStream(socket.getInputStream());
+            dos = new DataOutputStream(socket.getOutputStream());
 
             while ((codeCommand = dis.readUTF()) != null) {
-
-                dos = new DataOutputStream(socket.getOutputStream());
 
                 if (Integer.parseInt(codeCommand) == REGISTRATION) {
                     authorize(dis.readUTF(), dis.readUTF());
                 }
-                else if (Integer.parseInt(codeCommand) == LEAVE && controller.getMapParameters().get(socket).getParameter1().equals("client")) {
+                else if (Integer.parseInt(codeCommand) == LEAVE && "client".equals(controller.getMapParameters().get(socket).getParameter1())){
                     if (controller.getMapPair().containsKey(socket) == true) {
                         leave();
                     }
@@ -139,11 +139,11 @@ public class ServerThread extends Thread {
                     while (true) {
                         if (controller.getMapPair().containsKey(socket)) {
                             if(controller.getMapPair().get(socket).getParameter2()) {
-                                dos = new DataOutputStream(findValue(socket).getOutputStream());
-                                dos.writeInt(MESSAGE);
-                                dos.writeUTF(controller.getMapParameters().get(socket).getParameter1());
-                                dos.writeUTF(controller.getMapParameters().get(socket).getParameter2());
-                                dos.writeUTF(str);
+                                d = new DataOutputStream(findValue(socket).getOutputStream());
+                                d.writeInt(MESSAGE);
+                                d.writeUTF(controller.getMapParameters().get(socket).getParameter1());
+                                d.writeUTF(controller.getMapParameters().get(socket).getParameter2());
+                                d.writeUTF(str);
 
                                 controller.getMapPair().get(findValue(socket)).setParameter2(true);
                             }
@@ -153,7 +153,7 @@ public class ServerThread extends Thread {
                 }
             }
         }catch (IOException e) {
-            System.out.println(e);
+            LOGGER.catching(e);
         }
         finally {
             disconnect(dos, dis);
@@ -161,12 +161,11 @@ public class ServerThread extends Thread {
     }
 
     public void disconnect(DataOutputStream dos, DataInputStream dis) {
-
         if (socket != null) {
             try {
                 socket.close();
             } catch (IOException e) {
-                System.out.println(e);
+                LOGGER.catching(e);
             }
         }
 
@@ -174,14 +173,14 @@ public class ServerThread extends Thread {
             try {
                 dos.close();
             } catch (IOException e) {
-                System.out.println(e);
+                LOGGER.catching(e);
             }
         }
         if (dis != null) {
             try {
                 dis.close();
             } catch (IOException e) {
-                System.out.println(e);
+                LOGGER.catching(e);
             }
         }
     }

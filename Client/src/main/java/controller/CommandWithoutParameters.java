@@ -1,9 +1,13 @@
 package controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 
 public class CommandWithoutParameters implements Command {
 
+    private static final Logger LOGGER = LogManager.getLogger();
     private static final int LEAVE = 2;
     private static final int EXIT = 3;
     private static final int MESSAGE = 4;
@@ -25,14 +29,13 @@ public class CommandWithoutParameters implements Command {
             }
             else if (Validator.isValidateRequest(request, EXIT)) {
                 controller.sendCommandWithoutParameters(EXIT);
-                //controller.end();
-                //ClientConsole.exit();
             }
             else {
                 controller.sendMessage(request, MESSAGE);
             }
         } catch (IOException e) {
-            System.out.println("DataOutput Client: "+e);
+            LOGGER.catching(e);
+            controller.closeDos();
         }
     }
 }

@@ -1,16 +1,14 @@
 package model;
 
 import java.net.Socket;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
+import java.util.*;
 
 public class ServerBase {
 
-    private LinkedList<Socket> listAgent = new LinkedList<Socket>();
-    private LinkedList<Socket> listClient = new LinkedList<Socket>();
-    private Map<Socket, Parameters<Socket, Boolean>> mapPair = new HashMap<>();
-    private Map<Socket, Parameters<String, String>> mapParameters = new HashMap<>();
+    private List<Socket> listAgent = Collections.synchronizedList(new LinkedList<Socket>());
+    private List<Socket> listClient = Collections.synchronizedList(new LinkedList<Socket>());
+    private Map<Socket, Parameters<Socket, Boolean>> mapPair = Collections.synchronizedMap(new HashMap<>());
+    private Map<Socket, Parameters<String, String>> mapParameters = Collections.synchronizedMap(new HashMap<>());
     private int port;
 
     public ServerBase(int port){
@@ -21,11 +19,11 @@ public class ServerBase {
         return port;
     }
 
-    public LinkedList<Socket> getListAgent() {
+    public List<Socket> getListAgent() {
         return listAgent;
     }
 
-    public LinkedList<Socket> getListClient() {
+    public List<Socket> getListClient() {
         return listClient;
     }
 

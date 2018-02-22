@@ -398,3 +398,340 @@
 2018-02-22 00:31:40  - The client Pasha left the system
 2018-02-22 00:31:40  - The end of the chat between client Pasha and agent Sasha
 2018-02-22 00:31:43  - The agent Sasha left the system
+2018-02-22 01:13:06  - The appearance of client Alex in the system
+2018-02-22 01:13:13  - The appearance of agent Luda in the system
+2018-02-22 01:13:13  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 01:13:40  - The appearance of agent MAma in the system
+2018-02-22 01:13:45  - The end of the chat between client Alex and agent Luda
+2018-02-22 01:13:45  - The beginning of a chat between client Alex and agent MAma
+2018-02-22 01:14:14  - The end of the chat between client Alex and agent MAma
+2018-02-22 01:14:14  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 01:14:33  - The appearance of client S in the system
+2018-02-22 01:14:33  - The beginning of a chat between client S and agent MAma
+2018-02-22 01:14:50  - The appearance of client M in the system
+2018-02-22 01:15:09  - The end of the chat between client S and agent MAma
+2018-02-22 01:15:09  - The beginning of a chat between client M and agent MAma
+2018-02-22 01:15:28  - The client M left the system
+2018-02-22 01:15:28  - The end of the chat between client M and agent MAma
+2018-02-22 01:15:28  - The beginning of a chat between client S and agent MAma
+2018-02-22 01:15:31  - The client S left the system
+2018-02-22 01:15:31  - The end of the chat between client S and agent MAma
+2018-02-22 01:15:35  - The agent MAma left the system
+2018-02-22 01:15:38  - The agent Luda left the system
+2018-02-22 01:15:38  - The end of the chat between agent Luda and client Alex
+2018-02-22 01:15:41  - The client Alex left the system
+2018-02-22 01:22:17  - The appearance of client Alex in the system
+2018-02-22 01:22:17  - The client Alex left the system
+2018-02-22 01:23:08  - The appearance of client Alex in the system
+2018-02-22 01:23:08  - The client Alex left the system
+2018-02-22 01:24:55  - The appearance of client Alex in the system
+2018-02-22 01:25:03  - The client Alex left the system
+2018-02-22 01:26:24  - The appearance of client Alex in the system
+2018-02-22 01:26:24  - The client Alex left the system
+2018-02-22 01:27:13  - The appearance of client Alex in the system
+2018-02-22 01:27:13  - The client Alex left the system
+2018-02-22 01:30:22  - The appearance of client alex in the system
+2018-02-22 01:30:45  - The appearance of agent Luda in the system
+2018-02-22 01:30:45  - The beginning of a chat between client alex and agent Luda
+2018-02-22 01:31:22  - The agent Luda left the system
+2018-02-22 01:31:22  - The end of the chat between agent Luda and client alex
+2018-02-22 01:31:26  - The client alex left the system
+2018-02-22 01:45:58  - The appearance of client Alex in the system
+2018-02-22 01:46:03  - The client Alex left the system
+2018-02-22 01:46:24  - The appearance of client Alex in the system
+2018-02-22 01:46:33  - The appearance of agent Luda in the system
+2018-02-22 01:46:33  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 01:46:42  - The appearance of agent Mama in the system
+2018-02-22 01:47:45  - The end of the chat between client Alex and agent Luda
+2018-02-22 01:47:45  - The beginning of a chat between client Alex and agent Mama
+2018-02-22 01:48:23  - The agent Mama left the system
+2018-02-22 01:48:23  - The end of the chat between agent Mama and client Alex
+2018-02-22 01:48:23  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 01:49:29  - The appearance of client Alex in the system
+2018-02-22 01:49:47  - The appearance of agent Luda in the system
+2018-02-22 01:49:47  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 01:50:00  - The appearance of agent Sergey in the system
+2018-02-22 01:50:25  - The end of the chat between client Alex and agent Luda
+2018-02-22 01:50:25  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 01:50:58  - The end of the chat between client Alex and agent Sergey
+2018-02-22 01:50:58  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 01:51:08  - The end of the chat between client Alex and agent Luda
+2018-02-22 01:51:08  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 01:51:13  - The end of the chat between client Alex and agent Sergey
+2018-02-22 01:51:13  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 01:51:20  - The agent Luda left the system
+2018-02-22 01:51:20  - The end of the chat between agent Luda and client Alex
+2018-02-22 01:51:20  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 01:51:36  - The client Alex left the system
+2018-02-22 01:51:36  - The end of the chat between client Alex and agent Sergey
+2018-02-22 12:25:51  - The appearance of client Alex in the system
+2018-02-22 12:26:07  - The appearance of agent Luda in the system
+2018-02-22 12:26:07  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 12:26:20  - The client Alex left the system
+2018-02-22 12:26:20  - The end of the chat between client Alex and agent Luda
+2018-02-22 12:55:44  - The appearance of client Alex in the system
+2018-02-22 12:55:54  - The appearance of agent Luda in the system
+2018-02-22 12:55:54  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 12:56:05  - The client Alex left the system
+2018-02-22 12:56:05  - The end of the chat between client Alex and agent Luda
+2018-02-22 12:56:18  - The appearance of client Sergey in the system
+2018-02-22 12:56:18  - The beginning of a chat between client Sergey and agent Luda
+2018-02-22 12:56:29  - The end of the chat between client Sergey and agent Luda
+2018-02-22 12:56:29  - The beginning of a chat between client Sergey and agent Luda
+2018-02-22 12:58:09  - The appearance of client Alex in the system
+2018-02-22 12:58:16  - The appearance of agent Sergey in the system
+2018-02-22 12:58:16  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 12:58:27  - The client Alex left the system
+2018-02-22 12:58:27  - The end of the chat between client Alex and agent Sergey
+2018-02-22 12:58:40  - The appearance of client M in the system
+2018-02-22 12:58:40  - The beginning of a chat between client M and agent Sergey
+2018-02-22 13:00:06  - The appearance of client Alex in the system
+2018-02-22 13:00:14  - The appearance of agent Luda in the system
+2018-02-22 13:00:14  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 13:00:35  - The appearance of agent Sergey in the system
+2018-02-22 13:00:39  - The end of the chat between client Alex and agent Luda
+2018-02-22 13:00:39  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 13:00:50  - The end of the chat between client Alex and agent Sergey
+2018-02-22 13:00:50  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 13:01:02  - The agent Luda left the system
+2018-02-22 13:01:02  - The end of the chat between agent Luda and client Alex
+2018-02-22 13:01:02  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 13:01:53  - The client Alex left the system
+2018-02-22 13:01:53  - The end of the chat between client Alex and agent Sergey
+2018-02-22 13:02:00  - The agent Sergey left the system
+2018-02-22 13:49:33  - The appearance of client Alex in the system
+2018-02-22 13:49:44  - The appearance of agent Sergey in the system
+2018-02-22 13:49:44  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 13:50:03  - The appearance of agent Luda in the system
+2018-02-22 13:50:06  - The end of the chat between client Alex and agent Sergey
+2018-02-22 13:50:06  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 13:50:16  - The agent Sergey left the system
+2018-02-22 13:50:21  - The agent Luda left the system
+2018-02-22 13:50:21  - The end of the chat between agent Luda and client Alex
+2018-02-22 13:50:34  - The appearance of client Alex in the system
+2018-02-22 13:50:58  - The appearance of agent S in the system
+2018-02-22 13:50:58  - The beginning of a chat between client Alex and agent S
+2018-02-22 13:51:04  - The appearance of agent M in the system
+2018-02-22 13:51:04  - The beginning of a chat between client Alex and agent M
+2018-02-22 13:53:18  - The appearance of client Alex in the system
+2018-02-22 13:53:47  - The appearance of client Sergey in the system
+2018-02-22 13:54:00  - The appearance of agent Luda in the system
+2018-02-22 13:54:00  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 13:54:10  - The appearance of agent Anya in the system
+2018-02-22 13:54:10  - The beginning of a chat between client Sergey and agent Anya
+2018-02-22 13:54:26  - The appearance of agent Mama in the system
+2018-02-22 13:54:45  - The agent Luda left the system
+2018-02-22 13:54:45  - The end of the chat between agent Luda and client Alex
+2018-02-22 13:54:45  - The beginning of a chat between client Alex and agent Mama
+2018-02-22 13:55:04  - The end of the chat between client Alex and agent Mama
+2018-02-22 13:55:04  - The beginning of a chat between client Alex and agent Mama
+2018-02-22 13:55:14  - The agent Mama left the system
+2018-02-22 13:55:14  - The end of the chat between agent Mama and client Alex
+2018-02-22 13:55:27  - The client Alex left the system
+2018-02-22 13:55:47  - The agent Anya left the system
+2018-02-22 13:55:47  - The end of the chat between agent Anya and client Sergey
+2018-02-22 13:55:52  - The client Sergey left the system
+2018-02-22 13:56:56  - The appearance of client Alex in the system
+2018-02-22 13:57:08  - The appearance of agent Luda in the system
+2018-02-22 13:57:08  - The beginning of a chat between client Alex and agent Luda
+2018-02-22 13:57:22  - The appearance of client Sergey in the system
+2018-02-22 13:57:35  - The appearance of agent Anya in the system
+2018-02-22 13:57:35  - The beginning of a chat between client Sergey and agent Anya
+2018-02-22 13:58:31  - The client Alex left the system
+2018-02-22 13:58:31  - The end of the chat between client Alex and agent Luda
+2018-02-22 13:58:33  - The agent Luda left the system
+2018-02-22 13:58:40  - The agent Anya left the system
+2018-02-22 13:58:40  - The end of the chat between agent Anya and client Sergey
+2018-02-22 13:58:55  - The appearance of agent M in the system
+2018-02-22 13:58:55  - The beginning of a chat between client Sergey and agent M
+2018-02-22 13:59:06  - The agent M left the system
+2018-02-22 13:59:06  - The end of the chat between agent M and client Sergey
+2018-02-22 14:15:20  - START SERVER
+2018-02-22 14:15:38  - The appearance of client Alex in the system
+2018-02-22 14:15:54  - The appearance of agent Alex in the system
+2018-02-22 14:15:54  - The beginning of a chat between client Alex and agent Alex
+2018-02-22 14:16:21  - The client Alex left the system
+2018-02-22 14:16:21  - The end of the chat between client Alex and agent Alex
+2018-02-22 14:16:21 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:16:27  - The agent Alex left the system
+2018-02-22 14:16:27 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:23:55  - START SERVER
+2018-02-22 14:24:14  - The appearance of client Alex in the system
+2018-02-22 14:24:33  - The appearance of agent Sergey in the system
+2018-02-22 14:24:33  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 14:25:14  - The client Alex left the system
+2018-02-22 14:25:14  - The end of the chat between client Alex and agent Sergey
+2018-02-22 14:25:14 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:25:14 Catching
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:224) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:337) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:26:15  - The appearance of client AS in the system
+2018-02-22 14:26:15  - The beginning of a chat between client AS and agent Sergey
+2018-02-22 14:26:43 Catching
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:224) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:337) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:26:48  - START SERVER
+2018-02-22 14:27:05  - The appearance of client Alex in the system
+2018-02-22 14:27:12  - The appearance of agent Sergey in the system
+2018-02-22 14:27:12  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 14:27:27  - The agent Sergey left the system
+2018-02-22 14:27:27  - The end of the chat between agent Sergey and client Alex
+2018-02-22 14:27:27 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:27:27 Catching
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:224) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:337) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:28:06  - START SERVER
+2018-02-22 14:28:18  - The appearance of client Alex in the system
+2018-02-22 14:28:23  - The appearance of agent Sergey in the system
+2018-02-22 14:28:23  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 14:28:34  - The agent Sergey left the system
+2018-02-22 14:28:34  - The end of the chat between agent Sergey and client Alex
+2018-02-22 14:28:34 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:28:37  - The client Alex left the system
+2018-02-22 14:28:37 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:30:55  - START SERVER
+2018-02-22 14:31:07  - The appearance of client alex in the system
+2018-02-22 14:31:15  - The appearance of agent Sergey in the system
+2018-02-22 14:31:15  - The beginning of a chat between client alex and agent Sergey
+2018-02-22 14:31:33  - The agent Sergey left the system
+2018-02-22 14:31:33  - The end of the chat between agent Sergey and client alex
+2018-02-22 14:31:33 Catching
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:171) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:224) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:337) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:31:33 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:35:24  - START SERVER
+2018-02-22 14:35:37  - The appearance of client Alex in the system
+2018-02-22 14:35:43  - The appearance of agent Sergey in the system
+2018-02-22 14:35:43  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 14:35:54  - The agent Sergey left the system
+2018-02-22 14:35:54  - The end of the chat between agent Sergey and client Alex
+2018-02-22 14:35:54 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:35:57  - The client Alex left the system
+2018-02-22 14:35:57 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:43:34  - The appearance of client Alex in the system
+2018-02-22 14:43:41  - The appearance of agent Sergey in the system
+2018-02-22 14:43:41  - The beginning of a chat between client Alex and agent Sergey
+2018-02-22 14:43:53  - The client Alex left the system
+2018-02-22 14:43:53  - The end of the chat between client Alex and agent Sergey
+2018-02-22 14:43:59  - The agent Sergey left the system
+2018-02-22 14:51:07 Catching
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:224) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:337) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:51:07 Catching
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:224) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:337) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:51:07 Catching
+java.net.SocketException: Connection reset
+	at java.net.SocketInputStream.read(SocketInputStream.java:210) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:141) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.read(SocketInputStream.java:224) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:337) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:51:14  - START SERVER
+2018-02-22 14:51:32  - The appearance of client Alkex in the system
+2018-02-22 14:51:43  - The appearance of agent Serg in the system
+2018-02-22 14:51:43  - The beginning of a chat between client Alkex and agent Serg
+2018-02-22 14:51:51  - The client Alkex left the system
+2018-02-22 14:51:51  - The end of the chat between client Alkex and agent Serg
+2018-02-22 14:51:51 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]
+2018-02-22 14:51:54  - The agent Serg left the system
+2018-02-22 14:51:54 Catching
+java.io.EOFException: null
+	at java.io.DataInputStream.readUnsignedShort(DataInputStream.java:340) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:589) ~[?:1.8.0_141]
+	at java.io.DataInputStream.readUTF(DataInputStream.java:564) ~[?:1.8.0_141]
+	at controller.ServerThread.run(ServerThread.java:122) [classes/:?]

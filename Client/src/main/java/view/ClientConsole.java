@@ -1,15 +1,20 @@
 package view;
 
 import controller.*;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
 
 public class ClientConsole {
 
+    private static final Logger LOGGER = LogManager.getLogger();
     private static final int REGISTRATION = 1;
 
     private ClientController controller;
-    private boolean agentOrClient = true;
+    private boolean isRegistration = true;
+
 
     public ClientConsole(ClientController controller)
     {
@@ -30,27 +35,27 @@ public class ClientConsole {
         while(true){
             if(scanner.hasNextLine()) {
                 line = scanner.nextLine();
-                if(agentOrClient){
+                if(isRegistration){
                     if (!Validator.isValidateRequest(line, REGISTRATION)) {
-                        System.out.println("Not correct");
+                        LOGGER.log(Level.INFO, " - Invalid command");
                         continue;
                     }
                     else{
                         Command commandRegistration = new CommandRegistration(line, controller, REGISTRATION);
                         commandRegistration.execute();
-                        agentOrClient = false;
+                        isRegistration = false;
                     }
                 }
                 else{
-                    Command commandLeafOrExit = new CommandWithoutParameters(line, controller);
-                    commandLeafOrExit.execute();
+                    Command commandLeaveOrExit = new CommandWithoutParameters(line, controller);
+                    commandLeaveOrExit.execute();
                 }
             }else
             {
                 try{
                     Thread.sleep(10);
                 }catch(InterruptedException e){
-                    System.out.println(e);
+                    LOGGER.catching(e);
                 }
             }
         }

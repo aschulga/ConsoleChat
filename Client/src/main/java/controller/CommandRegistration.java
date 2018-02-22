@@ -1,8 +1,13 @@
 package controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 
 public class CommandRegistration implements Command{
+
+    private static final Logger LOGGER = LogManager.getLogger();
     private ClientController controller;
     private String request;
     private int number;
@@ -18,7 +23,8 @@ public class CommandRegistration implements Command{
         try {
             controller.sendUserData(request, number);
         } catch (IOException e) {
-            System.out.println("DataOutput Client: "+e);
+            LOGGER.catching(e);
+            controller.closeDos();
         }
     }
 }

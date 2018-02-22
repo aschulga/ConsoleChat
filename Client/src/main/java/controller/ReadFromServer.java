@@ -1,10 +1,14 @@
 package controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.DataInputStream;
 import java.io.IOException;
 
 public class ReadFromServer extends Thread {
 
+    private static final Logger LOGGER = LogManager.getLogger();
     private static final int REGISTRATION = 1;
     private static final int LEAVE = 2;
     private static final int EXIT = 3;
@@ -26,7 +30,7 @@ public class ReadFromServer extends Thread {
                     try {
                         Thread.sleep(10);
                     } catch (InterruptedException e) {
-                        System.out.println(e);
+                        LOGGER.catching(e);
                     }
                     continue;
                 } else {
@@ -44,7 +48,7 @@ public class ReadFromServer extends Thread {
                         }
                         case EXIT: {
                             //controller.receiveAnswerForCommandExit();
-                            controller.end();
+                            controller.close();
                             break;
                         }
                         case MESSAGE: {
@@ -56,16 +60,10 @@ public class ReadFromServer extends Thread {
             }
         }
         catch(IOException e) {
-            System.out.println(e);
+            LOGGER.catching(e);
         }
         finally {
-            if (dis != null) {
-                try {
-                    dis.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+            controller.closeDis();
         }
     }
 }
