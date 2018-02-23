@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import view.ClientConsole;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -16,21 +17,21 @@ public class ClientController {
 
     private Socket socket = null;
     private ClientBase base;
-    private DataInputStream dis = null;
-    private DataOutputStream dos = null;
+    private DataInputStream dis;
+    private DataOutputStream dos;
 
     public ClientController(ClientBase base){
         this.base = base;
     }
 
-    public Socket getSocket() {
-        return socket;
-    }
-
     public void connect() throws IOException {
        socket = new Socket(base.getHost(),base.getPort());
-       dos = new DataOutputStream(socket.getOutputStream());
        dis = new DataInputStream(socket.getInputStream());
+       dos = new DataOutputStream(socket.getOutputStream());
+    }
+
+    public DataInputStream getDataInputStream() {
+        return dis;
     }
 
     public void sendUserData(String request, int number) throws IOException {
@@ -73,43 +74,31 @@ public class ClientController {
         LOGGER.log(Level.INFO, " - ["+str1+" "+str2+"] : "+str3);
     }
 
-    public void closeDis(){
-        try {
-            if (dis != null) {
-                dis.close();
-            }
-        }
-        catch (IOException e){
-            LOGGER.catching(e);
-        }
-    }
-
-    public void closeDos(){
-        try {
-            if (dos != null) {
-                dos.close();
-            }
-        }
-        catch (IOException e){
-            LOGGER.catching(e);
-        }
-    }
-
     public void close(){
-        try {
-            if (dis != null) {
-                dis.close();
-            }
-            if (dos != null) {
+        try{
+            if(dos != null){
                 dos.close();
             }
-            if (socket != null) {
+        }catch(IOException e){
+            LOGGER.catching(e);
+        }
+
+        try{
+            if(dis != null){
+                dis.close();
+            }
+        }catch(IOException e){
+            LOGGER.catching(e);
+        }
+
+        try{
+            if(socket != null){
                 socket.close();
             }
-            ClientConsole.exit();
-        }
-        catch (IOException e){
+        }catch(IOException e){
             LOGGER.catching(e);
         }
+
+        ClientConsole.exit();
     }
 }

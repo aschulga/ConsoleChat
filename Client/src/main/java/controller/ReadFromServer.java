@@ -2,6 +2,7 @@ package controller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import view.ClientConsole;
 
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -16,17 +17,16 @@ public class ReadFromServer extends Thread {
 
     private ClientController controller;
 
-    public ReadFromServer(ClientController controller){
+    public ReadFromServer(ClientController controller) {
         this.controller = controller;
     }
 
     @Override
     public void run() {
-        DataInputStream dis = null;
+
         try {
             while (true) {
-                dis = new DataInputStream(controller.getSocket().getInputStream());
-                if (dis.available() <= 0) {
+                if (controller.getDataInputStream().available() <= 0) {
                     try {
                         Thread.sleep(10);
                     } catch (InterruptedException e) {
@@ -34,20 +34,16 @@ public class ReadFromServer extends Thread {
                     }
                     continue;
                 } else {
-
-                    int number = dis.readInt();
+                    int number = controller.getDataInputStream().readInt();
 
                     switch (number) {
-                        case REGISTRATION:{
-                            controller.receiveAnswerServerForRegistration();
+                        case REGISTRATION: {
                             break;
                         }
                         case LEAVE: {
-                            controller.receiveAnswerForCommandLeave();
                             break;
                         }
                         case EXIT: {
-                            //controller.receiveAnswerForCommandExit();
                             controller.close();
                             break;
                         }
@@ -58,12 +54,10 @@ public class ReadFromServer extends Thread {
                     }
                 }
             }
-        }
-        catch(IOException e) {
+        } catch (IOException e) {
             LOGGER.catching(e);
-        }
-        finally {
-            controller.closeDis();
+        } finally {
+            controller.close();
         }
     }
 }

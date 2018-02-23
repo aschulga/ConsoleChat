@@ -94,7 +94,7 @@ public class ServerThread extends Thread {
             controller.getMapParameters().remove(socket);
             createPair();
         }
-        else {
+        else if(controller.getMapParameters().containsKey(socket)){
             LOGGER.log(Level.INFO, " - The "+controller.getMapParameters().get(socket).getParameter1()+" "+
                     controller.getMapParameters().get(socket).getParameter2()+" left the system");
 
@@ -109,6 +109,10 @@ public class ServerThread extends Thread {
 
     @Override
     public void run() {
+        clientHandling();
+    }
+
+    public synchronized void clientHandling(){
         DataInputStream dis = null;
         DataOutputStream dos = null;
         DataOutputStream d = null;
@@ -153,6 +157,7 @@ public class ServerThread extends Thread {
                 }
             }
         }catch (IOException e) {
+            exit();
             LOGGER.catching(e);
         }
         finally {

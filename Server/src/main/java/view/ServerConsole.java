@@ -24,6 +24,7 @@ public class ServerConsole {
             controller.waitClients();
         } catch (IOException e) {
             LOGGER.catching(e);
+            controller.close();
         }
     }
 }
