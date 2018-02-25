@@ -1,0 +1,632 @@
+2018-02-22 12:26:07  - [client Alex] : hello
+2018-02-22 12:26:11  - [agent Luda] : hei
+2018-02-22 12:55:57  - [client Alex] : hello
+2018-02-22 12:56:01  - [agent Luda] : hello
+2018-02-22 12:56:20  - [client Sergey] : hello
+2018-02-22 12:56:24  - [agent Luda] : wqr
+2018-02-22 12:56:36  - [client Sergey] : hei
+2018-02-22 12:56:40  - [agent Luda] : hewqj
+2018-02-22 12:57:31 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:31) ~[classes/:?]
+	at controller.CommandConnect.execute(CommandConnect.java:19) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:27) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 12:57:33 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:31) ~[classes/:?]
+	at controller.CommandConnect.execute(CommandConnect.java:19) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:27) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 12:58:21  - [client Alex] : hello
+2018-02-22 12:58:24  - [agent Sergey] : hello
+2018-02-22 12:58:45  - [client M] : hei
+2018-02-22 12:58:47  - [agent Sergey] : weqhe
+2018-02-22 13:00:17  - [client Alex] : hello
+2018-02-22 13:00:20  - [agent Luda] : hello
+2018-02-22 13:00:23  - [client Alex] : ewq
+2018-02-22 13:00:25  - [agent Luda] : ejwqr
+2018-02-22 13:00:45  - [client Alex] : he32qw
+2018-02-22 13:00:47  - [agent Sergey] : weqr
+2018-02-22 13:00:51  - [client Alex] : wqrj
+2018-02-22 13:00:53  - [agent Luda] : qew
+2018-02-22 13:01:47  - [client Alex] : hei
+2018-02-22 13:01:50  - [agent Sergey] : e
+2018-02-22 13:48:13 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:31) ~[classes/:?]
+	at controller.CommandConnect.execute(CommandConnect.java:19) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:27) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 13:48:15 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:31) ~[classes/:?]
+	at controller.CommandConnect.execute(CommandConnect.java:19) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:27) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 13:49:49  - [client Alex] : hello
+2018-02-22 13:49:51  - [agent Sergey] : hello
+2018-02-22 13:50:09  - [client Alex] : qwjr
+2018-02-22 13:50:11  - [agent Luda] : wr
+2018-02-22 13:50:51  - Invalid command
+2018-02-22 13:50:58  - [client Alex] : wjgqreqgwr
+2018-02-22 13:50:58  - [client Alex] : weqrjbweqbr
+2018-02-22 13:50:58  - [client Alex] : weqrjbweqbjtbweqt
+2018-02-22 13:51:34  - [client Alex] : hei
+2018-02-22 13:51:34  - [client Alex] : wqhkrkqwer
+2018-02-22 13:51:41  - [agent M] : dsadfasdf
+2018-02-22 13:52:53 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:31) ~[classes/:?]
+	at controller.CommandConnect.execute(CommandConnect.java:19) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:27) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 13:53:34  - Invalid command
+2018-02-22 13:54:00  - [client Alex] : hei 1
+2018-02-22 13:54:10  - [client Sergey] : hei2 
+2018-02-22 13:54:36  - [client Alex] : wqr
+2018-02-22 13:54:40  - [agent Luda] : hei
+2018-02-22 13:54:55  - [client Alex] : mama
+2018-02-22 13:55:00  - [agent Mama] : son
+2018-02-22 13:55:06  - [client Alex] : ne
+2018-02-22 13:55:10  - [agent Mama] : r
+2018-02-22 13:55:36  - [agent Anya] : heewqh
+2018-02-22 13:55:40  - [client Sergey] : rweqr
+2018-02-22 13:55:42  - [agent Anya] : ewjqr
+2018-02-22 13:55:44  - [client Sergey] : ejwr
+2018-02-22 13:57:10  - [client Alex] : her
+2018-02-22 13:57:12  - [agent Luda] : jweq
+2018-02-22 13:57:26  - Invalid command
+2018-02-22 13:57:41  - [agent Luda] : ewrrwqetwqet
+2018-02-22 13:57:43  - [client Alex] : ewqt
+2018-02-22 13:58:05  - [client Sergey] : hei
+2018-02-22 13:58:17  - [agent Anya] : hello
+2018-02-22 13:58:20  - [client Sergey] : wqr
+2018-02-22 13:58:26  - [client Alex] : /xit
+2018-02-22 13:58:55  - [client Sergey] : 34qwehr
+2018-02-22 13:58:55  - [client Sergey] : weqhitwqeit
+2018-02-22 13:58:55  - [client Sergey] : wqejtjqwetwqetweqt
+2018-02-22 13:58:57  - [agent M] : wqrjqwe
+2018-02-22 13:59:00  - [client Sergey] : ejwqjr
+2018-02-22 14:16:11  - [client Alex] : hello
+2018-02-22 14:16:16  - [agent Alex] : hello
+2018-02-22 14:24:05  - Invalid command
+2018-02-22 14:24:59  - [client Alex] : hello
+2018-02-22 14:25:03  - [agent Sergey] : hei
+2018-02-22 14:27:20  - [client Alex] : ewhqrj
+2018-02-22 14:27:22  - [agent Sergey] : wejr
+2018-02-22 14:28:28  - [client Alex] : werk
+2018-02-22 14:28:30  - [agent Sergey] : wrkj
+2018-02-22 14:31:23  - [client alex] : hello
+2018-02-22 14:31:25  - [agent Sergey] : hello
+2018-02-22 14:35:45  - [client Alex] : hello
+2018-02-22 14:35:48  - [agent Sergey] : hello
+2018-02-22 14:43:44  - [client Alex] : hello
+2018-02-22 14:43:47  - [agent Sergey] : hello
+2018-02-22 14:51:37  - Invalid command
+2018-02-22 14:51:46  - [client Alkex] : gejwr
+2018-02-22 14:51:48  - [agent Serg] : jweqr
+2018-02-22 18:09:52 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:31) ~[classes/:?]
+	at controller.CommandConnect.execute(CommandConnect.java:19) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:27) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 18:10:35  - [client lex] : hella
+2018-02-22 18:10:37  - [agent Luda] : ewjrhjqwet
+2018-02-22 18:55:41  - [client Alex] : hello
+2018-02-22 18:55:44  - [agent Sergey] : hello
+2018-02-22 18:55:57  - [client Alex] : wer
+2018-02-22 18:55:58  - [agent Sergey] : ejw
+2018-02-22 18:58:44  - Invalid command
+2018-02-22 18:59:04  - [client Alex] : hello
+2018-02-22 18:59:07  - [agent Luda] : hello
+2018-02-22 19:19:07 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 19:19:57  - [client Alex] : ewjr
+2018-02-22 19:19:59  - [agent Luda] : jwer
+2018-02-22 19:20:10  - [client Alex] : kew
+2018-02-22 19:20:12  - [agent Luda] : jwe
+2018-02-22 19:20:27  - [client Alex] : ert
+2018-02-22 19:20:34  - [agent L] : wqkr
+2018-02-22 19:20:53  - [client Alex] : hello
+2018-02-22 19:20:57  - [agent Luda] : hello
+2018-02-22 19:27:18 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 19:27:21 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 19:28:35  - [client Alex] : erkqwe
+2018-02-22 19:28:37  - [agent Luda] : werh
+2018-02-22 19:30:48 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 19:35:21  - Invalid command
+2018-02-22 19:35:30  - [client Sergey] : hei
+2018-02-22 19:35:32  - [agent S] : ewqr
+2018-02-22 19:35:34  - [client Sergey] : rekt
+2018-02-22 19:35:37  - [agent S] : ewkt
+2018-02-22 19:38:13 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 23:35:36  - [client Alex] : sdkaf
+2018-02-22 23:35:38  - [agent Luda] : sdangnsda
+2018-02-22 23:35:54 Catching
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method) ~[?:1.8.0_141]
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111) ~[?:1.8.0_141]
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.write(DataOutputStream.java:107) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:401) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323) ~[?:1.8.0_141]
+	at controller.ClientController.sendMessage(ClientController.java:66) ~[classes/:?]
+	at controller.WriteToServer.send(WriteToServer.java:52) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:31) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 23:36:18 Catching
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method) ~[?:1.8.0_141]
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111) ~[?:1.8.0_141]
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.write(DataOutputStream.java:107) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:401) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323) ~[?:1.8.0_141]
+	at controller.ClientController.sendMessage(ClientController.java:66) ~[classes/:?]
+	at controller.WriteToServer.send(WriteToServer.java:52) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:31) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 23:36:25 Catching
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method) ~[?:1.8.0_141]
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111) ~[?:1.8.0_141]
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.write(DataOutputStream.java:107) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:401) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323) ~[?:1.8.0_141]
+	at controller.ClientController.sendMessage(ClientController.java:66) ~[classes/:?]
+	at controller.WriteToServer.send(WriteToServer.java:52) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:31) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-22 23:36:25 Catching
+java.io.IOException: Stream closed.
+	at java.net.AbstractPlainSocketImpl.available(AbstractPlainSocketImpl.java:470) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.available(SocketInputStream.java:259) ~[?:1.8.0_141]
+	at java.io.FilterInputStream.available(FilterInputStream.java:168) ~[?:1.8.0_141]
+	at controller.ReadFromServer.run(ReadFromServer.java:29) [classes/:?]
+2018-02-22 23:37:12  - [client Ak] : jwqr
+2018-02-22 23:37:20  - [agent Luda] : rnklqewr
+2018-02-22 23:37:22  - [client Ak] : kwnqlr
+2018-02-22 23:37:24  - [agent Luda] : wqjr
+2018-02-22 23:37:37  - [client Sergey] : wqrjoqweojroqwejrojewqr
+2018-02-22 23:37:37  - [client Sergey] : ewqkthkwleqhtklweqht
+2018-02-22 23:37:37  - [client Sergey] : weqjtbjwkeqbtjweqbjtbqwejkt
+2018-02-22 23:37:43  - [agent Luda] : lekwqjrlwqer
+2018-02-22 23:37:45  - [client Sergey] : kewnqrklqwet
+2018-02-22 23:38:36  - [client Ak] : heq
+2018-02-22 23:38:38  - [agent Luda] : wkqr
+2018-02-22 23:38:51  - [client Sergey] : qewknrkweqnrkew
+2018-02-22 23:38:52  - [client Sergey] : ewqntklwneqtlknweq
+2018-02-22 23:38:53  - [client Sergey] : weqnktlqwetnlwe
+2018-02-22 23:38:56  - [agent Luda] : ewrnk
+2018-02-22 23:39:03  - [agent Luda] : exit
+2018-02-22 23:44:29  - [client Ak] : werqwe
+2018-02-22 23:44:31  - [agent Luda] : qwetwqe
+2018-02-22 23:45:27  - [client Sergey] : ewkr
+2018-02-22 23:45:30  - [agent Luda] : rewq
+2018-02-22 23:45:34  - [client Ak] : erqwe
+2018-02-22 23:45:38  - [agent Luda] : wqrwqer
+2018-02-22 23:45:40  - [client Ak] : ew,qr;,qwer
+2018-02-22 23:45:43  - [agent Luda] : mewqlrmlwqe
+2018-02-22 23:47:58  - [client Ak] : welmr
+2018-02-22 23:48:00  - [agent Luda] : kwer
+2018-02-22 23:48:06  - [client S] : werklqwe
+2018-02-22 23:48:08  - [agent Luda] : kewnqrlkq
+2018-02-22 23:48:46  - [client S] : weqrmewqlrmlwqe;mr
+2018-02-22 23:48:54  - [client Ak] : ewrjkqwer
+2018-02-22 23:49:23  - [client S] : sdnsab
+2018-02-22 23:49:23  - [client S] : ejwkrjqkewnrkwet
+2018-02-22 23:52:15  - Invalid command
+2018-02-22 23:52:30  - [client Alex] : wqermlwe
+2018-02-22 23:52:40  - [client Alex] : ewmqrlrmewlqr
+2018-02-22 23:54:10  - [client Alex] : wqer
+2018-02-22 23:54:12  - [agent Luda] : ewqt
+2018-02-22 23:54:35  - [client Sergey] : ekwqjrkqwejtkl
+2018-02-22 23:54:35  - [client Sergey] : weqntkwqentkweqjnt
+2018-02-22 23:54:35  - [client Sergey] : weqtjnweqktnqwekjnt
+2018-02-22 23:54:35  - [client Sergey] : weqtnjkwqentjkenwqtnwqe
+2018-02-22 23:54:37  - [agent S] : ewqer
+2018-02-23 01:25:14  - [agent agentZHOPA] : hop hey lalaley
+2018-02-23 01:27:34  - [client SEX_CLIENT] : i want you
+2018-02-23 01:28:11  - [agent agentZHOPA] : shodil pokakal
+2018-02-23 01:38:32  - [client BigDickInTheHouse] : dont Touch My Tralalala
+2018-02-23 01:57:54  - [client Alex] : wqrklwqe
+2018-02-23 01:57:56  - [agent Luda] : jerwjkerwt
+2018-02-23 12:10:44  - [client Alex] : hello
+2018-02-23 12:10:48  - [agent Luda] : hello
+2018-02-23 12:10:53  - [client Alex] : /levae
+2018-02-23 12:11:06  - [client Alex] : ewqlkrjqwket
+2018-02-23 12:11:10  - [agent Luda] : erknweqr
+2018-02-23 12:11:13  - [client Alex] : kewmkweqnkwneqknqwekntklwqet
+2018-02-23 15:47:19 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-23 15:47:52  - Invalid command
+2018-02-23 23:21:06  - [agent Luda] : ewqtwqet
+2018-02-23 23:21:08  - [client Alex] : ertnewqklnt
+2018-02-23 23:21:10  - [agent Luda] : ekwntwet
+2018-02-23 23:21:13  - [client Alex] : ektqwe
+2018-02-23 23:24:02  - [client Alex] : hello
+2018-02-23 23:24:05  - [agent Luda] : hello
+2018-02-23 23:26:03  - [client Alex] : wqr
+2018-02-23 23:26:05  - [agent Luda] : eqwtwqet
+2018-02-23 23:29:13  - Invalid command
+2018-02-23 23:30:16  - [client Alex] : hello
+2018-02-23 23:30:20  - [agent Luda] : hello
+2018-02-24 00:14:17  - [client Alex] : erlwqet
+2018-02-24 00:14:19  - [agent Luda] : ekwmtlqew
+2018-02-24 00:21:43  - Invalid command
+2018-02-24 00:22:19  - [client Alex] : ewkrmkweql
+2018-02-24 00:24:05  - [client Alex] : ewkjr
+2018-02-24 00:24:07  - [agent Luda] : ewj
+2018-02-24 00:26:57  - Invalid command
+2018-02-24 00:27:05  - [client ALex] : ewjrjkqw
+2018-02-24 00:27:07  - [agent Luda] : ejwrnk
+2018-02-24 00:31:11  - [client Alex] : hello
+2018-02-24 00:31:14  - [agent Luda] : hello
+2018-02-24 00:32:53  - [client Alex] : ehwqj
+2018-02-24 00:32:55  - [agent Luda] : ejw
+2018-02-24 00:39:26  - [client Alex] : hello
+2018-02-24 00:39:31  - [agent Luda] : hello
+2018-02-24 00:41:55  - [client Alex] : hello
+2018-02-24 00:41:59  - [agent Luda] : hello
+2018-02-24 00:43:22  - [client Alex] : hello
+2018-02-24 00:43:25  - [agent Luda] : hello
+2018-02-24 00:47:04  - Invalid command
+2018-02-24 00:47:19  - [client Alex] : wjqwrjqwer
+2018-02-24 00:47:23  - [agent Luda] : ewrjewqoirj
+2018-02-24 00:47:27  - [client Alex] : ewjqk
+2018-02-24 00:51:22  - [client Alex] : hello
+2018-02-24 00:51:29  - [agent Luda] : hello
+2018-02-24 00:55:51  - [client Alex] : ewlqmrl
+2018-02-24 00:55:53  - [agent Luda] : kewqr
+2018-02-24 00:56:04  - [client Alex] : weqrk
+2018-02-24 00:56:06  - [agent Luda] : leqw
+2018-02-24 00:58:00  - [client Alex] : hello
+2018-02-24 00:59:46  - [client Alex] : hello
+2018-02-24 01:01:39  - [client Sergey] : hello
+2018-02-24 01:05:17  - [client Alex] : werl
+2018-02-24 01:05:50  - [client Sergy] : jewq
+2018-02-24 01:05:53  - [agent Luda] : kwer
+2018-02-24 01:07:41  - [client Sergey] : hello
+2018-02-24 01:08:01  - [agent Luda] : hei
+2018-02-24 01:08:11  - [client Sergey] : hello
+2018-02-24 01:08:40  - [agent Luda] : hei
+2018-02-24 01:09:39  - [client Alex] : ewqr
+2018-02-24 01:11:39  - [client Alex] : hello
+2018-02-24 01:16:06 Catching
+java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method) ~[?:1.8.0_141]
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111) ~[?:1.8.0_141]
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.write(DataOutputStream.java:107) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:401) ~[?:1.8.0_141]
+	at java.io.DataOutputStream.writeUTF(DataOutputStream.java:323) ~[?:1.8.0_141]
+	at controller.ClientController.sendMessage(ClientController.java:66) ~[classes/:?]
+	at controller.WriteToServer.send(WriteToServer.java:52) [classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:31) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-24 01:16:06 Catching
+java.io.IOException: Stream closed.
+	at java.net.AbstractPlainSocketImpl.available(AbstractPlainSocketImpl.java:470) ~[?:1.8.0_141]
+	at java.net.SocketInputStream.available(SocketInputStream.java:259) ~[?:1.8.0_141]
+	at java.io.FilterInputStream.available(FilterInputStream.java:168) ~[?:1.8.0_141]
+	at controller.ReadFromServer.run(ReadFromServer.java:29) [classes/:?]
+2018-02-24 01:18:04  - [client Alex] : hello
+2018-02-24 01:22:34  - [client Alex] : hello
+2018-02-24 01:22:37  - [agent Luda] : hello
+2018-02-24 01:22:46  - [client Alex] : hello
+2018-02-24 01:22:51  - [agent Luda] : hello
+2018-02-24 01:27:41  - [agent Luda] : hello
+2018-02-24 01:27:44  - [client Alex] : hello
+2018-02-24 01:53:38  - [agent Luda] : hello
+2018-02-24 01:58:34  - [agent Luda] : hello
+2018-02-24 02:04:54  - [agent Luda] : hello
+2018-02-24 10:47:42  - Invalid command
+2018-02-24 10:48:00  - [agent Luda] : hello
+2018-02-24 10:58:05  - [agent Luda] : hello
+2018-02-24 11:04:24  - [agent Luda] : hello
+2018-02-24 11:09:30  - [agent Luda] : hello
+2018-02-24 17:27:56  - [agent Luda] : rweq
+2018-02-24 17:27:58  - [client Alex] : wet
+2018-02-24 17:29:48  - [agent Luda] : wer
+2018-02-24 17:29:52  - [client Alex] : ewknr
+2018-02-24 17:30:48  - [agent Luda] : hello
+2018-02-24 17:33:17  - [agent Luda] : hello
+2018-02-24 17:35:16  - [agent Luda] : rqwekr
+2018-02-24 17:36:36  - [agent Luda] : hello
+2018-02-24 17:38:28  - [agent Luda] : hello
+2018-02-24 17:43:17  - [agent Luda] : ewrkl
+2018-02-24 17:43:19  - [client Alex] : lewkqmr
+2018-02-24 17:43:25  - [agent Luda] : lwe;qr,;
+2018-02-24 17:43:27  - [client Alex] : mwlq;er
+2018-02-24 18:14:06  - Invalid command
+2018-02-24 18:19:16  - Invalid command
+2018-02-24 18:20:13 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-24 18:22:12 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-24 18:22:39 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-24 19:04:54 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:28) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-24 19:07:44  - [agent Luda] : weqrwqerwq
+2018-02-24 19:07:47  - [client Alex] : ewqrqwet
+2018-02-24 19:08:03  - [agent Sergey] : werwqerqwer
+2018-02-24 19:08:12  - [client Alex] : reywerutri
+2018-02-24 19:08:26  - [agent Luda] : srfgreewr
+2018-02-24 19:08:30  - [client Alex] : retwery
+2018-02-24 22:59:31  - [ agent] : Luda
+2018-02-24 23:01:31  - [ agent] : Luda
+2018-02-24 23:06:31  - [ agent] : Luda
+2018-02-24 23:09:36  - [ agent] : Luda
+2018-02-24 23:16:46  - [agent Luda] : hello
+2018-02-24 23:16:49  - [client Alex] : hello
+2018-02-24 23:17:14  - [agent Luda] : heu
+2018-02-24 23:17:16  - [client Sergey] : elwq
+2018-02-25 00:32:39  - Invalid command
+2018-02-25 00:39:04  - [ agent] : Luda
+2018-02-25 00:40:19  - [ client] : Alex
+2018-02-25 00:44:08  - [ agent] : S
+2018-02-25 00:46:19  - [agent Luda] : hello
+2018-02-25 00:46:26  - [client Alex] : hello
+2018-02-25 00:46:30  - [agent Luda] : wqeklwqjr
+2018-02-25 00:46:32  - [client Alex] : rkwenqrknwqeklrn
+2018-02-25 00:46:41  - [agent Luda] : lwmeqrl;q
+2018-02-25 00:46:43  - [client Alex] : ewqlmrlwe
+2018-02-25 00:50:34  - [agent Luda] : hello
+2018-02-25 00:50:36  - [client Alex] : hello
+2018-02-25 00:50:43  - [agent Luda] : heq
+2018-02-25 00:50:45  - [client Alex] : qwklr
+2018-02-25 00:51:37  - Invalid command
+2018-02-25 00:52:01  - [agent Luda] : hello
+2018-02-25 00:52:04  - [client Alex] : hello
+2018-02-25 00:52:11  - [agent Sergey] : hqi
+2018-02-25 00:52:13  - [client Alex] : ewrlqwer
+2018-02-25 00:52:19  - [agent Luda] : qhrewqr
+2018-02-25 00:52:23  - [client Alex] : kwqnrlk
+2018-02-25 00:52:29  - [agent Sergey] : wklqnrlq
+2018-02-25 00:52:31  - [client Alex] : ewqklrn
+2018-02-25 00:55:14 Catching
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method) ~[?:1.8.0_141]
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_141]
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_141]
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172) ~[?:1.8.0_141]
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_141]
+	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_141]
+	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_141]
+	at controller.ClientController.connect(ClientController.java:27) ~[classes/:?]
+	at view.ClientConsole.init(ClientConsole.java:22) [classes/:?]
+	at Main.main(Main.java:10) [classes/:?]
+2018-02-25 00:56:25  - [agent Luda] : hello
+2018-02-25 01:07:05  - Invalid command
+2018-02-25 01:13:37  - [agent Luda] : hello
+2018-02-25 01:13:40  - [client Alex] : hello
+2018-02-25 01:13:55  - [agent Sergey] : wejrhjqwr
+2018-02-25 01:13:59  - [client Alex] : ewqjrhkwqe
+2018-02-25 01:14:02  - [agent Sergey] : enwrl
+2018-02-25 01:14:48  - Invalid command
+2018-02-25 01:20:01  - [agent Luda] : hello
+2018-02-25 01:21:34  - [agent Luda] : wqlr;
+2018-02-25 01:21:36  - [client Alex] : weklr
+2018-02-25 01:36:30  - [agent Luda] : hello
+2018-02-25 01:36:33  - [client Alex] : hello
+2018-02-25 01:59:20  - [agent Luda] : kwlqnr
+2018-02-25 01:59:29  - [client Alex] : wrkmqwelr
+2018-02-25 01:59:35  - [agent Luda] : /xeit
