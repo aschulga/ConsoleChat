@@ -55,7 +55,6 @@ public class ServerController {
             if(serverSocket != null){
                 serverSocket.close();
             }
-            System.out.println("wqrwqrqr");
         }catch(IOException e){
             LOGGER.catching(e);
         }

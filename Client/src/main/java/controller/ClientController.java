@@ -6,10 +6,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import view.ClientConsole;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
+import java.util.Scanner;
 
 public class ClientController {
 
@@ -17,8 +16,8 @@ public class ClientController {
 
     private Socket socket = null;
     private ClientBase base;
-    private DataInputStream dis;
-    private DataOutputStream dos;
+    private Scanner reader;
+    private PrintWriter writer;
 
     public ClientController(ClientBase base){
         this.base = base;
@@ -26,71 +25,36 @@ public class ClientController {
 
     public void connect() throws IOException {
        socket = new Socket(base.getHost(),base.getPort());
-       dis = new DataInputStream(socket.getInputStream());
-       dos = new DataOutputStream(socket.getOutputStream());
+       reader = new Scanner(socket.getInputStream(), "UTF-8");
+       writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true);
     }
 
-    public DataInputStream getDataInputStream() {
-        return dis;
+    public Scanner getScanner() {
+        return reader;
     }
 
-    public void sendUserData(String request, int number) throws IOException {
-        String[]string = request.split(" ");
-        dos.writeUTF(String.valueOf(number));
-        dos.writeUTF(string[1]);
-        dos.writeUTF(string[2]);
-        dos.flush();
+    public void sendUserData(String request){
+        writer.println(request);
     }
 
-    public void receiveAnswerServerForRegistration() throws IOException {
-        LOGGER.log(Level.INFO, " - "+dis.readUTF());
+    public void sendMessage(String message){
+        writer.println(message);
     }
 
-    public void sendCommandWithoutParameters(int number) throws IOException {
-        dos.writeUTF(String.valueOf(number));
-    }
-
-    public void receiveAnswerForCommandLeave() throws IOException {
-        String str1 = dis.readUTF();
-        String str2 = dis.readUTF();
-        LOGGER.log(Level.INFO, " - "+str1+" "+str2+" leave");
-    }
-
-    public void receiveAnswerForCommandExit() throws IOException {
-        String str1 = dis.readUTF();
-        String str2 = dis.readUTF();
-        LOGGER.log(Level.INFO, " - "+str1+" "+str2+" exit");
-    }
-
-    public void sendMessage(String message, int number) throws IOException {
-        dos.writeUTF(String.valueOf(number));
-        dos.writeUTF(message);
-    }
-
-    public void receive() throws IOException {
-        String str1 = dis.readUTF();
-        String str2 = dis.readUTF();
-        String str3 = dis.readUTF();
+    public void receive(){
+        String str1 = reader.nextLine();
+        String str2 = reader.nextLine();
+        String str3 = reader.nextLine();
         LOGGER.log(Level.INFO, " - ["+str1+" "+str2+"] : "+str3);
     }
 
     public void close(){
-        try{
-            if(dos != null){
-                dos.close();
-            }
-        }catch(IOException e){
-            LOGGER.catching(e);
+        if(writer != null){
+            writer.close();
         }
-
-        try{
-            if(dis != null){
-                dis.close();
-            }
-        }catch(IOException e){
-            LOGGER.catching(e);
+        if(reader != null){
+            reader.close();
         }
-
         try{
             if(socket != null){
                 socket.close();

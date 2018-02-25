@@ -4,16 +4,18 @@ import model.Parameters;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+
+import java.io.*;
 import java.net.Socket;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
 public class ServerThread extends Thread {
 
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final int REGISTRATION = 1;
-    private static final int LEAVE = 2;
+    private static final String COMMAND_REGISTER = "/register";
+    private static final String COMMAND_LEAVE = "/leave";
+    private static final String COMMAND_EXIT = "/exit";
     private static final int EXIT = 3;
     private static final int MESSAGE = 4;
 
@@ -113,42 +115,35 @@ public class ServerThread extends Thread {
     }
 
     public synchronized void clientHandling(){
-        DataInputStream dis = null;
-        DataOutputStream dos = null;
-        DataOutputStream d = null;
-        String codeCommand;
-        String str;
+        Scanner scanner = null;
+        PrintWriter writer = null;
+        String request;
         try {
 
-            dis = new DataInputStream(socket.getInputStream());
-            dos = new DataOutputStream(socket.getOutputStream());
+            scanner = new Scanner(socket.getInputStream(), "UTF-8");
+            writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true);
 
-            while ((codeCommand = dis.readUTF()) != null) {
+            while ((request = scanner.nextLine()) != null) {
 
-                if (Integer.parseInt(codeCommand) == REGISTRATION) {
-                    authorize(dis.readUTF(), dis.readUTF());
+                String[]string = request.split(" ");
+
+                if (COMMAND_REGISTER.equals(string[0])) {
+                    authorize(string[1], string[2]);
                 }
-                else if (Integer.parseInt(codeCommand) == LEAVE && "client".equals(controller.getMapParameters().get(socket).getParameter1())){
-                    if (controller.getMapPair().containsKey(socket) == true) {
+                else if (COMMAND_LEAVE.equals(string[0]) && "client".equals(controller.getMapParameters().get(socket).getParameter1())){
+                    if (controller.getMapPair().containsKey(socket)) {
                         leave();
                     }
                 }
-                else if (Integer.parseInt(codeCommand) == EXIT) {
+                else if (COMMAND_EXIT.equals(string[0])) {
                     exit();
-                    dos.writeInt(EXIT);
+                    writer.println(EXIT);
                 }
-                else if (Integer.parseInt(codeCommand) == MESSAGE){
-                    str = dis.readUTF();
-
+                else{
                     while (true) {
                         if (controller.getMapPair().containsKey(socket)) {
                             if(controller.getMapPair().get(socket).getParameter2()) {
-                                d = new DataOutputStream(findValue(socket).getOutputStream());
-                                d.writeInt(MESSAGE);
-                                d.writeUTF(controller.getMapParameters().get(socket).getParameter1());
-                                d.writeUTF(controller.getMapParameters().get(socket).getParameter2());
-                                d.writeUTF(str);
-
+                                sendMessageToUser(findValue(socket), request);
                                 controller.getMapPair().get(findValue(socket)).setParameter2(true);
                             }
                             break;
@@ -156,34 +151,33 @@ public class ServerThread extends Thread {
                     }
                 }
             }
-        }catch (IOException e) {
+        }catch (IOException | NoSuchElementException e) {
             exit();
             LOGGER.catching(e);
         }
         finally {
-            disconnect(dos, dis);
+            disconnect(writer, scanner);
         }
     }
 
-    public void disconnect(DataOutputStream dos, DataInputStream dis) {
+    public void sendMessageToUser(Socket socket, String str) throws IOException {
+        PrintWriter writer = new PrintWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8"), true);
+        writer.println(MESSAGE);
+        writer.println(controller.getMapParameters().get(socket).getParameter1());
+        writer.println(controller.getMapParameters().get(socket).getParameter2());
+        writer.println(str);
+    }
+
+    public void disconnect(PrintWriter writer, Scanner scanner) {
+        if(writer != null){
+            writer.close();
+        }
+        if(scanner != null){
+            scanner.close();
+        }
         if (socket != null) {
             try {
                 socket.close();
-            } catch (IOException e) {
-                LOGGER.catching(e);
-            }
-        }
-
-        if (dos != null) {
-            try {
-                dos.close();
-            } catch (IOException e) {
-                LOGGER.catching(e);
-            }
-        }
-        if (dis != null) {
-            try {
-                dis.close();
             } catch (IOException e) {
                 LOGGER.catching(e);
             }
